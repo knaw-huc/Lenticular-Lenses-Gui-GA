@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import {StyleGuide, DescribedMock, Embed} from './component-view';
 import { HcHeaderGoldenAgents } from './golden-agents';
-import { HcLlLayoutHome, HcLlLayoutProjectDetail, HcLlLayoutDataselectionList} from './llPages';
+import { HcLlLayoutHome, HcLlLayoutProjectDetail, HcLlLayoutDataselectionOverview, HcLlDataSelectionDetail} from './llPages';
 
 
 
@@ -29,7 +29,11 @@ ReactDOM.render(
 
     Data selection List
     <HcHeaderGoldenAgents toolName="Lenticular Lenses" projectName="Project Y"/>
-    <HcLlLayoutDataselectionList/>
+    <HcLlLayoutDataselectionOverview/>
+
+    Data selection Detail
+    <HcHeaderGoldenAgents toolName="Lenticular Lenses" projectName="Project Y"/>
+    <HcLlDataSelectionDetail/>
 
 
     </div>

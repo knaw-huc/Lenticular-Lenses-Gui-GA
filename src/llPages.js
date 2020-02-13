@@ -1,6 +1,7 @@
 import React from 'react';
 import { HcLlListItemMinimal, HcLlListLabel, HcLlListItemDataSelection,HcResultListPaging } from './llListItems';
 import { HcLlSubNavigation } from './llUtils';
+import { HclLIconDataSelection } from './golden-agents';
 //const Fragment = React.Fragment;
 
 
@@ -84,7 +85,7 @@ import { HcLlSubNavigation } from './llUtils';
 
 
 
-      export class HcLlLayoutDataselectionList extends React.Component {
+      export class HcLlLayoutDataselectionOverview extends React.Component {
         render() {
           return (
               <React.Fragment>
@@ -132,3 +133,64 @@ import { HcLlSubNavigation } from './llUtils';
             );
           }
         }
+
+
+
+        export class HcLlDataSelectionDetail extends React.Component {
+          render() {
+            return (
+              <React.Fragment>
+              <HcLlSubNavigation/>
+              <div className="hcContentContainer hcMarginBottom3">
+                  <div className="hcRowJustify">
+                    <div className="hcBasicSideMargin">
+                      <h3><HclLIconDataSelection/> Marriages in 1600-1649</h3>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hcContentContainer">
+                      <div className="hcTabs hcTabsHoriz hcBasicSideMargin">
+                        <div className="hcTabLabels">
+                          <div
+                              className="hcTabLabel hcRoundedCornersTop"
+                              id="tab-list-info">Info</div>
+                          <div className="hcTabLabel" id="tab-list-dataset">Dataset</div>
+                          <div className="hcTabLabel" id="tab-list-filter">Filter</div>
+                          <div className="hcTabLabel" id="tab-list-sample">Sample</div>
+                          <div
+                            className="hcTabLabel"
+                            id="tab-list-relation">Relation</div>
+                        </div>
+                        <div className="hcTabAllContent hcStickOutBoxAside hcRoundedCornersTop">
+                          <div
+                            className="hcTabContent hcMarginTop2 hcForm"
+                            id="tab-content-info">
+                            <h3>Name</h3>
+                            <input
+                              type="text"
+                              name
+                              defaultValue
+                              className="hcMarginBottom2" />
+                            <h3>Description</h3>
+                            <textarea
+                              name="name"
+                              rows={4}
+                              className="hcMarginBottom1" />
+                            <button type="button" name="button">
+                              Save project
+                            </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+            </ React.Fragment>
+
+
+              );
+            }
+          }
