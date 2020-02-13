@@ -1,30 +1,26 @@
 import React from 'react';
+import logoGa from './images/logo-ga.png';
 //const Fragment = React.Fragment;
 
 
   export class HcHeaderGoldenAgents extends React.Component {
     render() {
       return (
-        <React.Fragment>
-
         <div className="hcGaHeader hcMarginBottom3 bgColorBrand1">
           <div className="hcGaHeaderLogo">
               <img
-              src="https://d33wubrfki0l68.cloudfront.net/ed17091f189bc37f34f94717f506432501dbc722/d072a/images/logo-ga.png"
+              src={logoGa}
               alt="Golden Agents logo" />
           </div>
           <div className="hcGaHeaderToolName">
               {this.props.toolName}
           </div>
           <div className="hcGaHeaderProject">
-          {this.props.projectName}
+            {this.props.projectName}
           </div>
         <div className="hcGaHeaderHelp" />
       </div>
 
-
-
-        </React.Fragment>
         );
       }
     }
