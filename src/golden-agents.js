@@ -24,3 +24,24 @@ import logoGa from './images/logo-ga.png';
         );
       }
     }
+
+
+
+    export class HclLIconDataSelection extends React.Component {
+      render() {
+        return (
+            <div className="hc-ga-icon hc-ga-icon-ds hcRoundedCorners"> </div>
+
+          );
+        }
+      }
+
+
+      export class HclLIconAlignment extends React.Component {
+        render() {
+          return (
+              <div className="hc-ga-icon hc-ga-icon-al hcRoundedCorners"> </div>
+
+            );
+          }
+        }

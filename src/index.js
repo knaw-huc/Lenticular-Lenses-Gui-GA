@@ -1,11 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {StyleGuide, DescribedMock, Embed} from './component-view';
 
+import {StyleGuide, DescribedMock, Embed} from './component-view';
 import { HcHeaderGoldenAgents } from './golden-agents';
- import { HcLlLayoutHome, HcLlLayoutProjectDetail, HcLlLayoutTabs} from './llLayouts';
-// import { HcFacetBasic } from './facets';
-// import { HcResultListHeader, HcResultList, HcResultListPaging } from './results';
+import { HcLlLayoutHome, HcLlLayoutProjectDetail, HcLlLayoutDataselectionList} from './llPages';
+
 
 
 ReactDOM.render(
@@ -28,8 +27,10 @@ ReactDOM.render(
     <HcHeaderGoldenAgents toolName="Lenticular Lenses" projectName="Project Y"/>
     <HcLlLayoutProjectDetail/>
 
-    Data selection Homepage
-    <HcLlLayoutTabs/>
+    Data selection List
+    <HcHeaderGoldenAgents toolName="Lenticular Lenses" projectName="Project Y"/>
+    <HcLlLayoutDataselectionList/>
+
 
     </div>
     ,
