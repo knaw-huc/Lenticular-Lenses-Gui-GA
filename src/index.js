@@ -7,6 +7,8 @@ import { HcLlLayoutHome, HcLlLayoutProjectDetail, HcLlLayoutDataselectionOvervie
 
 
 
+
+
 ReactDOM.render(
 <div>
     <StyleGuide>
@@ -14,6 +16,8 @@ ReactDOM.render(
           <Embed caption="Timbuctoo Header" description="">
             <HcHeaderGoldenAgents toolName="Lenticular Lenses" projectName="Project Y"/>
           </Embed>
+
+
       </DescribedMock>
 
 
