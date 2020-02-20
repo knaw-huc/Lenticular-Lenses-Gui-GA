@@ -1,0 +1,22 @@
+{
+  "toolName": "Lenticular Lenses",
+  "projectName": "Project Y",
+  "pages": [
+    {
+      "pageName": "Home",
+      "projectList": [
+        {"prName":"How many couples went to the notary after announcing their marriage? ", "prDescription":"We expect couples to visit a notary to make their prenuptial agreement before getting married. To answer this question we use the Prenuptial agreements from the Notarial Acts of the Amsterdam City Archives and the Intended Marriage Registry. "},
+        {"prName":"RIJKSMUSEUM-ECARTICO 20200122", "prDescription":"RIJKSMUSEUM-ECARTICO 20200122"}
+      ]
+    },
+    {
+      "pageName": "Data selection",
+      "pageNavDs": true,
+      "dsList": [
+        {"dsName":"Marriages in 1600-1649", "dsDataset":"Index op notarieel archief", "dsProvider":"Stadsarchief Amsterdam"},
+        {"dsName":"Marriages in the 17th Century", "dsDataset":"Index op notarieel archief", "dsProvider":"Stadsarchief Amsterdam"},
+        {"dsName":"Marriages in the 18th Century", "dsDataset":"Index op notarieel archief", "dsProvider":"Stadsarchief Amsterdam"}
+      ]
+    }
+  ]
+}

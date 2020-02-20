@@ -29,8 +29,7 @@ import { HclLIconDataSelection } from './golden-agents';
             <div className="hcBasicSideMargin hcMarginBottom4">
               <h2>Projects</h2>
               <div className="hcList hcMarginBottom4">
-                <HcLlListItemMinimal title="Project 1"/>
-                <HcLlListItemMinimal title="Project 2"/>
+                {this.props.pageData.projectList.map(item => (<HcLlListItemMinimal title={item.prName}/>))}
               </div>
               <div className="hcStickOutBox hcRoundedCorners">
                 <p className="hcMarginBottom1">
@@ -85,7 +84,7 @@ import { HclLIconDataSelection } from './golden-agents';
 
 
 
-      export class HcLlLayoutDataselectionOverview extends React.Component {
+      export class HcLlLayoutDataSelectionOverview extends React.Component {
         render() {
           return (
               <React.Fragment>
@@ -120,9 +119,9 @@ import { HclLIconDataSelection } from './golden-agents';
 
                     <div className="hcList hcListDisctinctLines hcBasicSideMargin hcMarginBottom2">
                       {/* results */}
-                      <HcLlListItemDataSelection title="Marriages in 1600-1649"  dataset="Index op notarieel archief" provider="Stadsarchief Amsterdam"/>
-                      <HcLlListItemDataSelection title="Marriages in the 17th Century" dataset="Index op notarieel archief" provider="Stadsarchief Amsterdam"/>
-                      <HcLlListItemDataSelection title=" Marriages in the 18th Century" dataset="Index op notarieel archief" provider="Stadsarchief Amsterdam"/>
+                      {this.props.pageData.dsList.map(item => (<HcLlListItemDataSelection title={item.dsName} dataset={item.dsDataset} provider={item.dsProvider}/>))}
+
+
 
                     </div>
                     {/* pagination */}
@@ -149,18 +148,14 @@ import { HclLIconDataSelection } from './golden-agents';
                 </div>
               </div>
 
-              <div className="hcContentContainer">
+              <div className="hcContentContainer hcMarginBottom5">
                       <div className="hcTabs hcTabsHoriz hcBasicSideMargin">
                         <div className="hcTabLabels">
-                          <div
-                              className="hcTabLabel hcRoundedCornersTop"
-                              id="tab-list-info">Info</div>
-                          <div className="hcTabLabel" id="tab-list-dataset">Dataset</div>
-                          <div className="hcTabLabel" id="tab-list-filter">Filter</div>
-                          <div className="hcTabLabel" id="tab-list-sample">Sample</div>
-                          <div
-                            className="hcTabLabel"
-                            id="tab-list-relation">Relation</div>
+                          <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-info">Info</div>
+                          <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-dataset">Dataset</div>
+                          <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-filter">Filter</div>
+                          <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-sample">Sample</div>
+                          <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-relation">Relation</div>
                         </div>
                         <div className="hcTabAllContent hcStickOutBoxAside hcRoundedCornersTop">
                           <div
@@ -181,6 +176,27 @@ import { HclLIconDataSelection } from './golden-agents';
                               Save project
                             </button>
             </div>
+            <div
+              className="hcTabContent hcMarginTop2"
+              id="tab-content-dataset">
+              <h3>Dataset</h3>
+            </div>
+            <div
+              className="hcTabContent hcMarginTop2"
+              id="tab-content-filter">
+              <h3>Filter</h3>
+            </div>
+            <div
+              className="hcTabContent hcMarginTop2"
+              id="tab-content-sample">
+              <h3>Sample</h3>
+            </div>
+            <div
+              className="hcTabContent hcMarginTop2"
+              id="tab-content-relation">
+              <h3>Relation</h3>
+            </div>
+
           </div>
         </div>
       </div>

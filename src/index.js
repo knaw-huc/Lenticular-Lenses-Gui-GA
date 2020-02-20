@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 
 import {StyleGuide, DescribedMock, Embed} from './component-view';
 import { HcHeaderGoldenAgents } from './golden-agents';
-import { HcLlLayoutHome, HcLlLayoutProjectDetail, HcLlLayoutDataselectionOverview, HcLlDataSelectionDetail} from './llPages';
+import { HcLlLayoutHome, HcLlLayoutProjectDetail, HcLlLayoutDataSelectionOverview, HcLlDataSelectionDetail} from './llPages';
 
-
+import data from './tempData';
 
 
 
@@ -14,29 +14,30 @@ ReactDOM.render(
     <StyleGuide>
       <DescribedMock title="Home">
           <Embed caption="Timbuctoo Header" description="">
-            <HcHeaderGoldenAgents toolName="Lenticular Lenses" projectName="Project Y"/>
+            <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
           </Embed>
 
 
       </DescribedMock>
 
 
+
     </StyleGuide>
 
     Homepage
-    <HcHeaderGoldenAgents toolName="Lenticular Lenses" projectName="Project Y"/>
-    <HcLlLayoutHome/>
+    <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+    <HcLlLayoutHome pageData={data.pages[0]} />
 
     Project detail page
-    <HcHeaderGoldenAgents toolName="Lenticular Lenses" projectName="Project Y"/>
+    <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
     <HcLlLayoutProjectDetail/>
 
     Data selection List
-    <HcHeaderGoldenAgents toolName="Lenticular Lenses" projectName="Project Y"/>
-    <HcLlLayoutDataselectionOverview/>
+    <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+    <HcLlLayoutDataSelectionOverview pageData={data.pages[1]} />
 
     Data selection Detail
-    <HcHeaderGoldenAgents toolName="Lenticular Lenses" projectName="Project Y"/>
+    <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
     <HcLlDataSelectionDetail/>
 
 

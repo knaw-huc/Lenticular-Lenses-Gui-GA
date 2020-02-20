@@ -1,17 +1,19 @@
-import React from 'react';
-// import list1 from './test.json';
-// import { TestA } from './try';
+import React, { Component } from 'react';
+import list from './test';
 
 
-const TestA = ({list1}) => (
-  <div>
-    {list1.map(listItem => (
-      <div>
-        {listItem.// import list1 from './test.json';
-        // import { TestA } from './try';prName}
-      </div>
-    ))}
-  </div>
-);
+const nameList = list;
 
-export default TestA;
+
+export class TestA extends React.Component {
+  //const socialMediaList = list;
+
+  render() {
+    return (
+      <ul>
+          {projectList.map(project => (<li>{item.prName}</li>))}
+      </ul>
+
+      );
+    }
+  }
