@@ -190,13 +190,19 @@ export class HcLlDataSelectionDetail extends React.Component {
               </div>
 
               {/* tab: Filter */}
-              <div className="hcTabContent hcMarginTop2" id="tab-content-filter">
+              <div className="hcTabContent hcMarginTop2 hcForm" id="tab-content-filter">
                 <h3>Filter</h3>
+
+
               </div>
 
               {/* tab: Sample */}
               <div className="hcTabContent hcMarginTop2" id="tab-content-sample">
                 <h3>Sample</h3>
+                <div className="hc2columns">
+                  <div>Only use a sample of this amount of records (-1 is no limit) </div>
+                  <div><input type="number" value="-1" /> </div>
+                </div>
               </div>
 
               {/* tab: Relation */}
@@ -228,30 +234,73 @@ export class HcLlDataSelectionDetail extends React.Component {
                   <div className="hcBasicSideMargin hcClrBg_Grey05 hcleftMark">
                     <div className="hcMarginTop2">
                        <strong>
-                      Index op doopregister
+                         {this.props.pageData.detailInfoName}
                       </strong>
                       </div>
                       <div className="hcSmallTxt hcClrTxt_Grey">
-                        Stadsarchief Amsterdam
+                        {this.props.pageData.detailInfoProvider}
                       </div>
                       <div className="hcSmallTxt hcClrTxt_Grey hcMarginBottom1">
-                        One-on-one conversion of the Index op ondertrouwregisters to RDF by Golden Agents.
+                        {this.props.pageData.detailInfodescription}
                       </div>
                     <div className="hcLabel">Entity</div>
                     <div className="hcList ">
-                      <div>bio_Marriage</div>
-                      <div>pnv_PersonName</div>
-                      <div>saa_IndexOpOndertrouwregisters</div>
-                      <div>saa_IntendedMarriage</div>
-                      <div className="hcSelectedListItem">saa_Person</div>
-                      <div>saa_PrenuptialAgreement</div>
-                      <div>sem_Event</div>
-                      <div>sem_Role</div>
-                      <div>sem_RoleType</div>
-                      <div>tim_unknown</div>
+                      {this.props.pageData.detailInfoEntities.map(item => (<HcLlListItemMinimal2Fields field1={item.field1} />))}
                     </div>
                   </div>
                 </div>
+
+
+      </ React.Fragment>);
+    }
+  }
+
+
+  {/* Modal select dataset */}
+  export class HcLlLayoutAlignmentOverview extends React.Component {
+    render() {
+      return (
+        <React.Fragment>
+
+          <HcLlSubNavigation/>
+
+          <div className="hcContentContainer hcMarginBottom2">
+            <div className="hcRowJustify">
+              <div className="hcBasicSideMargin">
+                Alignments
+              </div>
+              <div className="hcBasicSideMargin">
+                <button type="button" name="button">
+                  New aligment
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="hcContentContainer hcMarginBottom5">
+            <div className="hcResultsHeader hcMarginBottom1 hcBasicSideMargin">
+              <div>
+                {/* labels */}
+                <HcLlListLabel title="Data selections"/>
+              </div>
+
+              <div>
+                <select className="" name="">
+                  <option value="">Order by name</option>
+                  <option value="">Order by date updated</option>
+                  <option value="">Order by date create</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="hcList hcListDisctinctLines hcBasicSideMargin hcMarginBottom2">
+              {/* results */}
+              {this.props.pageData.alignmentList.map(item => (<HcLlListItemDataSelection title={item.dsName} dataset={item.dsDataset} provider={item.dsProvider}/>))}
+
+            </div>
+            {/* pagination */}
+            <HcResultListPaging/>
+          </div>
 
 
       </ React.Fragment>);

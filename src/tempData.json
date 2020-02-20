@@ -31,6 +31,31 @@
         {"field1": "Inventaris 5075x", "field2": "Stadsarchief Amsterdam"},
         {"field1": "Inventaris 5073", "field2": "Stadsarchief Amsterdam"},
         {"field1": "Inventaris 5072", "field2": "Stadsarchief Amsterdam"}
+      ],
+      "detailInfoName": "Index op doopregister",
+      "detailInfoProvider": "Stadsarchief Amsterdam",
+      "detailInfodescription": "One-on-one conversion of the Index op ondertrouwregisters to RDF by Golden Agents.",
+      "detailInfoEntities": [
+        {"field1": "bio_Marriage"},
+        {"field1": "pnv_PersonName"},
+        {"field1": "saa_IndexOpOndertrouwregisters"},
+        {"field1": "saa_PrenuptialAgreement"},
+        {"field1": "sem_Event"},
+        {"field1": "sem_Role"},
+        {"field1": "sem_RoleType"},
+        {"field1": "tim_unknown"}
+      ]
+    },
+    {
+      "pageName": "Alignment- list",
+      "pageNavDs": true,
+      "alignmentList": [
+        {"prName": "Getty & Frick vs NA:: approx Lev 0,7", "prSource":"7634", "prTarget": "232.113", "prLinks": "345", "prCusters": "33", "prStatus": "Matched-Clustered"},
+        {"prName": "Getty & Frick vs NA:: soundex 0,85",   "prSource":"2344", "prTarget": "32.233", "prLinks": "156", "prCusters": "11", "prStatus": "Matched-Clustered"},
+        {"prName": "Getty vs Frick:: Lev 7",               "prSource":"7634", "prTarget": "32.233", "prLinks": "345", "prCusters": "", "prStatus": "Matched"},
+        {"prName": "Getty vs Frick:: soundex 0,85::",      "prSource":"7634", "prTarget": "232.113", "prLinks": "145", "prCusters": "15", "prStatus": "Matched-Clustered"},
+        {"prName": "Getty vs NA:: Lev 7",                  "prSource":"2455", "prTarget": "232.113", "prLinks": "145", "prCusters": "", "prStatus": "Matched"},
+        {"prName": "Getty vs NA:: approx Lev 0,7",         "prSource":"3765", "prTarget": "756", "prLinks": "145", "prCusters": "125", "prStatus": "Matched-Clustered"}
       ]
     }
   ]
