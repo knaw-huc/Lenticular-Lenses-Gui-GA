@@ -10,7 +10,16 @@
       ]
     },
     {
-      "pageName": "Data selection",
+      "pageName": "Data selection - list",
+      "pageNavDs": true,
+      "dsList": [
+        {"dsName":"Marriages in 1600-1649", "dsDataset":"Index op notarieel archief", "dsProvider":"Stadsarchief Amsterdam"},
+        {"dsName":"Marriages in the 17th Century", "dsDataset":"Index op notarieel archief", "dsProvider":"Stadsarchief Amsterdam"},
+        {"dsName":"Marriages in the 18th Century", "dsDataset":"Index op notarieel archief", "dsProvider":"Stadsarchief Amsterdam"}
+      ]
+    },
+    {
+      "pageName": "Data selection - Detail",
       "pageNavDs": true,
       "dsList": [
         {"dsName":"Marriages in 1600-1649", "dsDataset":"Index op notarieel archief", "dsProvider":"Stadsarchief Amsterdam"},
