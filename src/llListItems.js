@@ -15,6 +15,24 @@ import { HclLIconDataSelection } from './golden-agents';
     }
 
 
+    export class HcLlListItemMinimal2Fields extends React.Component {
+      render() {
+        return (
+          <div className="hcAlignVertical">
+            <div>
+              {this.props.field1}
+              <div className="hcSmallTxt hcClrTxt_Grey">
+                {this.props.field2}
+              </div>
+            </div>
+          </div>
+
+
+          );
+        }
+      }
+
+
 
     export class HcLlListLabel extends React.Component {
       render() {

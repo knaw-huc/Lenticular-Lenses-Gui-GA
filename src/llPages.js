@@ -1,5 +1,5 @@
 import React from 'react';
-import {HcLlListItemMinimal, HcLlListLabel, HcLlListItemDataSelection, HcResultListPaging} from './llListItems';
+import {HcLlListItemMinimal, HcLlListItemMinimal2Fields, HcLlListLabel, HcLlListItemDataSelection, HcResultListPaging} from './llListItems';
 import {HcLlSubNavigation} from './llUtils';
 import {HclLIconDataSelection} from './golden-agents';
 
@@ -184,7 +184,7 @@ export class HcLlDataSelectionDetail extends React.Component {
                   </div>
                 </div>
                 <button type="button" name="button">
-                  Select data < /button>
+                  Select data </button>
                 </div>
 
               </div>
@@ -215,11 +215,44 @@ export class HcLlDataSelectionDetail extends React.Component {
 
 
 
-
-  export class HcLlLayoutModalSelectDataset extends React.Component {
+  {/* Modal select dataset */}
+  export class HcLlSelectDataset extends React.Component {
     render() {
       return (
         <React.Fragment>
+          <div className=" hc2columns">
+                  <div className="hcList hcMarginBottom4 hcBasicSideMargin hcMaxhalf">
+                    {this.props.pageData.datasetList.map(item => (<HcLlListItemMinimal2Fields field1={item.field1} field2={item.field2} />))}
+
+                  </div>
+                  <div className="hcBasicSideMargin hcClrBg_Grey05 hcleftMark">
+                    <div className="hcMarginTop2">
+                       <strong>
+                      Index op doopregister
+                      </strong>
+                      </div>
+                      <div className="hcSmallTxt hcClrTxt_Grey">
+                        Stadsarchief Amsterdam
+                      </div>
+                      <div className="hcSmallTxt hcClrTxt_Grey hcMarginBottom1">
+                        One-on-one conversion of the Index op ondertrouwregisters to RDF by Golden Agents.
+                      </div>
+                    <div className="hcLabel">Entity</div>
+                    <div className="hcList ">
+                      <div>bio_Marriage</div>
+                      <div>pnv_PersonName</div>
+                      <div>saa_IndexOpOndertrouwregisters</div>
+                      <div>saa_IntendedMarriage</div>
+                      <div className="hcSelectedListItem">saa_Person</div>
+                      <div>saa_PrenuptialAgreement</div>
+                      <div>sem_Event</div>
+                      <div>sem_Role</div>
+                      <div>sem_RoleType</div>
+                      <div>tim_unknown</div>
+                    </div>
+                  </div>
+                </div>
+
 
       </ React.Fragment>);
     }

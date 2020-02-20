@@ -19,12 +19,18 @@
       ]
     },
     {
-      "pageName": "Data selection - Detail",
+      "pageName": "modal select dataset",
       "pageNavDs": true,
-      "dsList": [
-        {"dsName":"Marriages in 1600-1649", "dsDataset":"Index op notarieel archief", "dsProvider":"Stadsarchief Amsterdam"},
-        {"dsName":"Marriages in the 17th Century", "dsDataset":"Index op notarieel archief", "dsProvider":"Stadsarchief Amsterdam"},
-        {"dsName":"Marriages in the 18th Century", "dsDataset":"Index op notarieel archief", "dsProvider":"Stadsarchief Amsterdam"}
+      "datasetList": [
+        {"field1": "Inventaris 5075x", "field2": "Stadsarchief Amsterdam"},
+        {"field1": "Inventaris 5073", "field2": "Stadsarchief Amsterdam"},
+        {"field1": "Inventaris 5072", "field2": "Stadsarchief Amsterdam"},
+        {"field1": "Linkset: Alignment 1 STCN-Onstage", "field2": "Universiteit van Amsterdam"},
+        {"field1": "Onstage", "field2": "Universiteit van Amsterdam"},
+        {"field1": "Short-Title Catalogue Netherlands (STCN)", "field2": "Koninklijke Bibliotheek"},
+        {"field1": "Inventaris 5075x", "field2": "Stadsarchief Amsterdam"},
+        {"field1": "Inventaris 5073", "field2": "Stadsarchief Amsterdam"},
+        {"field1": "Inventaris 5072", "field2": "Stadsarchief Amsterdam"}
       ]
     }
   ]

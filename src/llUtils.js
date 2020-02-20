@@ -16,3 +16,30 @@ import React from 'react';
         );
       }
     }
+
+
+
+    export class HcModal extends React.Component {
+      render() {
+        return (
+          <div class="hcModal">
+            <div class="hcContentContainer">
+              <div class="hcModelContentWrap">
+
+                <div class="hcBasicSideMargin hc2columns hcMarginBottom2 hcMarginTop2">
+                  <h3>{this.props.modalName}</h3>
+                  <div class="hcTxtRight">Close</div>
+                </div>
+
+                {this.props.children}
+
+              </div>
+            </div>
+          </div>
+
+
+
+
+          );
+        }
+      }

@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 
 import {StyleGuide, DescribedMock, Embed} from './component-view';
 import {HcHeaderGoldenAgents} from './golden-agents';
-import {HcLlLayoutHome, HcLlLayoutProjectDetail, HcLlLayoutDataSelectionOverview, HcLlDataSelectionDetail} from './llPages';
+import {HcLlLayoutHome, HcLlLayoutProjectDetail, HcLlLayoutDataSelectionOverview, HcLlDataSelectionDetail, HcLlSelectDataset} from './llPages';
+import {HcModal} from './llUtils';
 
 import data from './tempData';
 
@@ -32,10 +33,16 @@ ReactDOM.render(<div>
 
   Data selection Detail
   <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
-  <HcLlDataSelectionDetail pageData={data.pages[2]}/>
+  <HcLlDataSelectionDetail />
+  
+{/* Modal select dataset
+  Dataset browser modal page
+  <HcModal modalName="Dataset browser">
+    <HcLlSelectDataset pageData={data.pages[2]} />
+  </HcModal>
+  */}
 
-  Data set browser modal page
-  <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
-  <HcLlDataSelectionDetail pageData={data.pages[3]}/>
+
+
 
 </div>, document.getElementById('container'));
