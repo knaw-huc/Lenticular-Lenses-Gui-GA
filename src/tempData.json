@@ -57,6 +57,16 @@
         {"prName": "Getty vs NA:: Lev 7",                  "prSource":"2455", "prTarget": "232.113", "prLinks": "145", "prCusters": "", "prStatus": "Matched"},
         {"prName": "Getty vs NA:: approx Lev 0,7",         "prSource":"3765", "prTarget": "756", "prLinks": "145", "prCusters": "125", "prStatus": "Matched-Clustered"}
       ]
+    },
+    {
+      "pageName": "Alignment- detail",
+      "pageNavDs": true,
+      "matchSetSrc": ["Frick experiment [type: saa_Inventory]:: Notarial Acts ONLY","GPI experiment [type: saa_Inventory]:: Notarial Acts ONLY"],
+      "matchSetTrg": [
+        "Stadsarchief Amsterdam: Index op notarieel archief [type: saa_HuwelijkseVoorwaarden]",
+        "Stadsarchief Amsterdam: Index op notarieel archief [type: saa_Boedelscheiding]",
+        "Stadsarchief Amsterdam: Index op notarieel archief [type: saa_Boedelinventaris]",
+        "Stadsarchief Amsterdam: Index op notarieel archief [type: saa_Testament]"]
     }
   ]
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import {HcLlListItemMinimal, HcLlListItemMinimal2Fields, HcLlListLabel, HcLlListItemDataSelection, HcLlListItemAlignment, HcResultListPaging} from './llListItems';
 import {HcLlSubNavigation} from './llUtils';
-import {HclLIconDataSelection} from './golden-agents';
+import {HclLIconDataSelection, HclLIconAlignment} from './golden-agents';
 
 export class HcLlLayoutHome extends React.Component {
   render() {
@@ -278,19 +278,24 @@ export class HcLlDataSelectionDetail extends React.Component {
           </div>
 
           <div className="hcContentContainer hcMarginBottom5">
-            <div className="hcResultsHeader hcMarginBottom1 hcBasicSideMargin">
-              <div>
-                {/* labels */}
-                <HcLlListLabel title="Data selections"/>
-              </div>
 
-              <div>
+            <div className="hcList hcMarginBottom1 hcBasicSideMargin">
+              <div className="hcListHeader">
+
+                <div className="hcLabel hcListItemLong">Name</div>
+                <div className="hcLabel hcTxtRight">Source</div>
+                <div className="hcLabel hcTxtRight">Targets</div>
+                <div className="hcLabel hcTxtRight">Links</div>
+                <div className="hcLabel hcTxtRight">Clusters</div>
+                <div className="hcLabel">Status</div>
+
                 <select className="" name="">
                   <option value="">Order by name</option>
                   <option value="">Order by date updated</option>
                   <option value="">Order by date create</option>
                 </select>
-              </div>
+
+                </div>
             </div>
 
             <div className="hcList hcListDisctinctLines hcBasicSideMargin hcMarginBottom2">
@@ -306,3 +311,77 @@ export class HcLlDataSelectionDetail extends React.Component {
       </ React.Fragment>);
     }
   }
+
+
+
+
+
+
+  export class HcLlAlignmentDetail extends React.Component {
+    render() {
+      return (<React.Fragment>
+        <HcLlSubNavigation/>
+        <div className="hcContentContainer hcMarginBottom3">
+          <div className="hcRowJustify">
+            <div className="hcBasicSideMargin">
+              <h3><HclLIconAlignment/> Getty & Frick vs NA:: soundex 0,85</h3>
+            </div>
+          </div>
+        </div>
+
+        <div className="hcContentContainer hcMarginBottom5">
+          <div className="hcTabs hcTabsHoriz hcBasicSideMargin">
+            <div className="hcTabLabels">
+              <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-info-a">Info</div>
+              <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-matching-settings">Matching settings</div>
+              <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-links">links</div>
+              <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-clusters">clusters</div>
+            </div>
+            <div className="hcTabAllContent hcStickOutBoxAside hcRoundedCornersTop">
+
+              {/* tab: info */}
+              <div className="hcTabContent hcMarginTop2 hcForm" id="tab-content-info-a">
+                <h3>Name</h3>
+                <input type="text" name="name" defaultValue="defaultValue" className="hcMarginBottom2"/>
+                <h3>Description</h3>
+                <textarea name="name" rows={4} className="hcMarginBottom1"/>
+                <button type="button" name="button">
+                  Save project
+                </button>
+              </div>
+
+              {/* tab: Dataset and entity */}
+              <div className="hcTabContent hcMarginTop2" id="tab-content-matching-settings">
+              <h3>Sources</h3>
+              <div className="hcList hcMarginBottom1">
+                {this.props.pageData.matchSetSrc.map(item => (<div className="hcRowJustify"> <div><HclLIconDataSelection/> {item}</div><div className="hcTxtRight"><a href="">Delete</a></div> </div>))}
+              </div>
+
+              <h3>Targets</h3>
+              <div className="hcList hcMarginBottom1">
+                {this.props.pageData.matchSetTrg.map(item => (<div className="hcRowJustify"> <div><HclLIconDataSelection/> {item}</div><div className="hcTxtRight"><a href="">Delete</a></div> </div>))}
+              </div>
+
+
+                </div>
+
+                {/* tab: Filter */}
+                <div className="hcTabContent hcMarginTop2 hcForm" id="tab-content-links">
+                  <h3>Filter</h3>
+
+
+                </div>
+
+                {/* tab: Sample */}
+                <div className="hcTabContent hcMarginTop2" id="tab-cont">
+                  <h3>Sample</h3>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </ React.Fragment>
+        );
+      }
+    }

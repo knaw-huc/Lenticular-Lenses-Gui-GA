@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import {StyleGuide, DescribedMock, Embed} from './component-view';
 import {HcHeaderGoldenAgents} from './golden-agents';
-import {HcLlLayoutHome, HcLlLayoutProjectDetail, HcLlLayoutDataSelectionOverview, HcLlDataSelectionDetail, HcLlSelectDataset, HcLlLayoutAlignmentOverview} from './llPages';
+import {HcLlLayoutHome, HcLlLayoutProjectDetail, HcLlLayoutDataSelectionOverview, HcLlDataSelectionDetail, HcLlSelectDataset, HcLlLayoutAlignmentOverview, HcLlAlignmentDetail} from './llPages';
 import {HcModal} from './llUtils';
 
 import data from './tempData';
@@ -49,6 +49,10 @@ ReactDOM.render(<div>
   <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
   <HcLlLayoutAlignmentOverview pageData={data.pages[3]}/>
 
+
+  Alignment detail
+  <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+  <HcLlAlignmentDetail pageData={data.pages[4]}/>
 
 
 </div>, document.getElementById('container'));
