@@ -1,5 +1,5 @@
 import React from 'react';
-import {HcLlListItemMinimal, HcLlListItemMinimal2Fields, HcLlListLabel, HcLlListItemDataSelection, HcResultListPaging} from './llListItems';
+import {HcLlListItemMinimal, HcLlListItemMinimal2Fields, HcLlListLabel, HcLlListItemDataSelection, HcLlListItemAlignment, HcResultListPaging} from './llListItems';
 import {HcLlSubNavigation} from './llUtils';
 import {HclLIconDataSelection} from './golden-agents';
 
@@ -295,7 +295,7 @@ export class HcLlDataSelectionDetail extends React.Component {
 
             <div className="hcList hcListDisctinctLines hcBasicSideMargin hcMarginBottom2">
               {/* results */}
-              {this.props.pageData.alignmentList.map(item => (<HcLlListItemDataSelection title={item.dsName} dataset={item.dsDataset} provider={item.dsProvider}/>))}
+              {this.props.pageData.alignmentList.map(item => (<HcLlListItemAlignment prName={item.prName} prSource={item.prSource} prTarget={item.prTarget}  prLinks={item.prLinks} prCusters={item.prCusters} prStatus={item.prStatus} />))}
 
             </div>
             {/* pagination */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { HclLIconDataSelection } from './golden-agents';
+import { HclLIconDataSelection, HclLIconAlignment } from './golden-agents';
 
 
   export class HcLlListItemMinimal extends React.Component {
@@ -66,11 +66,44 @@ import { HclLIconDataSelection } from './golden-agents';
               <div><a href>Duplicate</a></div>
               <div><a href>Delete</a></div>
             </div>
-
-
             );
           }
         }
+
+
+
+        export class HcLlListItemAlignment extends React.Component {
+          render() {
+            return (
+              <div className="hcListBasicResult">
+                <div className="hcListItemLong">
+                  <strong> <HclLIconAlignment/>{this.props.prName}</strong>
+                </div>
+                <div className="hcSmallTxt hcTxtRight">
+                  {this.props.prSource}
+                </div>
+                <div className="hcSmallTxt hcTxtRight">
+                  {this.props.prSource}
+                </div>
+                <div className="hcSmallTxt hcTxtRight">
+                  {this.props.prTarget}
+                </div>
+                <div className="hcSmallTxt hcTxtRight">
+                  {this.props.prLinks}
+                </div>
+                <div className="hcSmallTxt hcTxtRight">
+                  {this.props.prCusters}
+                </div>
+                <div className="hcSmallTxt hcTxtRight">
+                  {this.props.prStatus}
+                </div>
+                <div><a href>Duplicate</a></div>
+              </div>
+
+
+              );
+            }
+          }
 
 
 
