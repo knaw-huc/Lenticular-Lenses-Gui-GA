@@ -106,6 +106,57 @@ import { HclLIconDataSelection, HclLIconAlignment } from './golden-agents';
           }
 
 
+          export class HcLlListItemAlignmentLinks extends React.Component {
+            render() {
+              return (
+                <div class="hcListBasicResult">
+                    <div className>{this.props.strenght}</div>
+                    <div className="hcListItemLong">
+                      <div className="hcLabel"><HclLIconDataSelection/> {this.props.s1}</div>
+                      <strong>{this.props.s2}</strong>
+                      <div className="hcSmallTxt hcClrTxt_Grey hcTextTruncate">{this.props.s3}</div>
+                    </div>
+                    <div className="hcListItemLong">
+                      <div className="hcLabel"><HclLIconDataSelection/> {this.props.t1}</div>
+                      <strong>{this.props.t2}</strong>
+                      <div className="hcSmallTxt hcClrTxt_Grey hcTextTruncate">{this.props.t3}</div>
+                    </div>
+                    <div className="hcListItemLong">
+                      <button type="button" name="button">Compare</button>
+                      <button type="button" name="button">Accept</button>
+                      <button type="button" name="button">Decline</button>
+                    </div>
+              </div>
+                );
+              }
+            }
+
+
+
+            export class HcLlListItemAlignmentClusters extends React.Component {
+              render() {
+                return (
+                  <div className="hcListBasicResult">
+                    <div className="hcSmallTxt">391</div>
+                    <div className="hcSmallTxt">73.642</div>
+                    <div className="hcListItemLong">
+                      <div className="hcLabel"><HclLIconDataSelection/> foaf_name</div>
+                      <strong>Mary Jans</strong>
+                    </div>
+                    <div className="hcListItemLong">
+                      <div className="hcLabel"><HclLIconDataSelection/> Schema_Name</div>
+                      <strong>Brugge-Antwerpen</strong>
+                    </div>
+                    <div className="hcSmallTxt hcTxtCenter"> x </div>
+                    <div className="hcSmallTxt hcTxtCenter"> x </div>
+                    <div className="hcSmallTxt"> 2345234542 </div>
+                  </div>
+
+                  );
+                }
+              }
+
+
 
 
         export class HcResultListPaging extends React.Component {

@@ -66,7 +66,18 @@
         "Stadsarchief Amsterdam: Index op notarieel archief [type: saa_HuwelijkseVoorwaarden]",
         "Stadsarchief Amsterdam: Index op notarieel archief [type: saa_Boedelscheiding]",
         "Stadsarchief Amsterdam: Index op notarieel archief [type: saa_Boedelinventaris]",
-        "Stadsarchief Amsterdam: Index op notarieel archief [type: saa_Testament]"]
+        "Stadsarchief Amsterdam: Index op notarieel archief [type: saa_Testament]"
+      ],
+      "links": [
+        {"sEntity": "foaf_name", "sName":"Mary Jans", "sUri": "http://www.vondel.humanities.uva.nl/onstage/persons/2236", "strenght": "1.000", "tEntity": "foaf_name", "tName":"Mary Jans", "tUri": "http://www.vondel.humanities.uva.nl/onstage/persons/2236"},
+        {"sEntity": "foaf_name", "sName":"Mary Jans", "sUri": "http://www.vondel.humanities.uva.nl/onstage/persons/2236", "strenght": "1.000", "tEntity": "foaf_name", "tName":"Mary Jans", "tUri": "http://www.vondel.humanities.uva.nl/onstage/persons/2236"},
+        {"sEntity": "foaf_name", "sName":"Mary Jans", "sUri": "http://www.vondel.humanities.uva.nl/onstage/persons/2236", "strenght": "1.000", "tEntity": "foaf_name", "tName":"Mary Jans", "tUri": "http://www.vondel.humanities.uva.nl/onstage/persons/2236"}
+      ],
+      "clusters":[
+        {"size":"","links":"","sEntity": "foaf_name", "sName":"Mary Jans","tEntity": "Schema_Name", "tName":"Brugge-Antwerpen1", "ext":"x","reconc":"x", "id":"2345252455"},
+        {"size":"","links":"","sEntity": "foaf_name", "sName":"Mary Jans","tEntity": "Schema_Name", "tName":"Brugge-Antwerpen", "ext":"x","reconc":"x", "id":"2345213444"},
+        {"size":"","links":"","sEntity": "foaf_name", "sName":"Mary Jans","tEntity": "Schema_Name", "tName":"Brugge-Antwerpen", "ext":"x","reconc":"x", "id":"2345278772"}
+      ]
     }
   ]
 }

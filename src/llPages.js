@@ -1,5 +1,5 @@
 import React from 'react';
-import {HcLlListItemMinimal, HcLlListItemMinimal2Fields, HcLlListLabel, HcLlListItemDataSelection, HcLlListItemAlignment, HcResultListPaging} from './llListItems';
+import {HcLlListItemMinimal, HcLlListItemMinimal2Fields, HcLlListLabel, HcLlListItemDataSelection, HcLlListItemAlignment, HcResultListPaging,HcLlListItemAlignmentLinks, HcLlListItemAlignmentClusters} from './llListItems';
 import {HcLlSubNavigation} from './llUtils';
 import {HclLIconDataSelection, HclLIconAlignment} from './golden-agents';
 
@@ -334,8 +334,8 @@ export class HcLlDataSelectionDetail extends React.Component {
             <div className="hcTabLabels">
               <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-info-a">Info</div>
               <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-matching-settings">Matching settings</div>
-              <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-links">links</div>
-              <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-clusters">clusters</div>
+              <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-links">Links</div>
+              <div className="hcTabLabel hcRoundedCornersTop" id="tab-list-clusters">Clusters</div>
             </div>
             <div className="hcTabAllContent hcStickOutBoxAside hcRoundedCornersTop">
 
@@ -350,34 +350,60 @@ export class HcLlDataSelectionDetail extends React.Component {
                 </button>
               </div>
 
-              {/* tab: Dataset and entity */}
+              {/* tab: matching-settings */}
               <div className="hcTabContent hcMarginTop2" id="tab-content-matching-settings">
               <h3>Sources</h3>
               <div className="hcList hcMarginBottom1">
                 {this.props.pageData.matchSetSrc.map(item => (<div className="hcRowJustify"> <div><HclLIconDataSelection/> {item}</div><div className="hcTxtRight"><a href="">Delete</a></div> </div>))}
               </div>
+              <button type="button" className="hcMarginBottom2" >Add source</button>
 
               <h3>Targets</h3>
               <div className="hcList hcMarginBottom1">
                 {this.props.pageData.matchSetTrg.map(item => (<div className="hcRowJustify"> <div><HclLIconDataSelection/> {item}</div><div className="hcTxtRight"><a href="">Delete</a></div> </div>))}
               </div>
+              <button type="button" className="hcMarginBottom2">Add target</button>
 
 
                 </div>
 
-                {/* tab: Filter */}
+                {/* tab: Links */}
                 <div className="hcTabContent hcMarginTop2 hcForm" id="tab-content-links">
-                  <h3>Filter</h3>
+                  <div className="hcList hcMarginBottom1">
+                    <div className="hcListHeader">
+                      <div className="hcLabel">Strenght</div>
+                      <div className="hcLabel hcListItemLong">Source</div>
+                      <div className="hcLabel hcListItemLong">Targets</div>
+                      <div className="hcLabel hcListItemLong" ></div>
+                    </div>
+                  </div>
+
+                  <div className="hcList hcMarginBottom1">
+                    {this.props.pageData.links.map(item => (<HcLlListItemAlignmentLinks strenght={item.strenght} s1={item.sEntity} s2={item.sName} s3={item.sUri} t1={item.tEntity} t2={item.tName} t3={item.tUri} />))}
+                  </div>
+                </div>
+
+                {/* tab: Clusters */}
+                <div className="hcTabContent hcMarginTop2" id="tab-content-clusters">
+                  <div class="hcList hcMarginBottom1">
+                    <div className="hcListHeader">
+                      <div className="hcLabel">Size</div>
+                      <div className="hcLabel">Links</div>
+                      <div className="hcLabel hcListItemLong" ></div>
+                      <div className="hcLabel hcListItemLong" ></div>
+                      <div className="hcLabel hcTxtCenter">Extened</div>
+                      <div className="hcLabel hcTxtCenter">Reconciled</div>
+                      <div className="hcLabel ">ID</div>
+                    </div>
+                  </div>
+
+                  <div className="hcList hcListDisctinctLines hcMarginBottom2" >
+                    {this.props.pageData.clusters.map(item => (<HcLlListItemAlignmentClusters size={item.size} links={item.links} s1={item.sEntity} s2={item.sName} t1={item.tEntity} t2={item.tName} ext={item.ext} reconc={item.reconc} id={item.id} />))}
+                  </div>
+
 
 
                 </div>
-
-                {/* tab: Sample */}
-                <div className="hcTabContent hcMarginTop2" id="tab-cont">
-                  <h3>Sample</h3>
-
-                </div>
-
               </div>
             </div>
           </div>
