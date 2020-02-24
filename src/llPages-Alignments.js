@@ -2,7 +2,7 @@ import React from 'react';
 import {HcLlListItemMinimal, HcLlListItemMinimal2Fields, HcLlListLabel, HcLlListItemDataSelection, HcLlListItemAlignment, HcResultListPaging,HcLlListItemAlignmentLinks, HcLlListItemAlignmentClusters,HcLlListItemAlignmentClusterViewItem} from './llListItems';
 import {HcLlSubNavigation, HcLlCompareItem} from './llUtils';
 import {HclLIconDataSelection, HclLIconAlignment} from './golden-agents';
-import tempMap from './images/ga-ll-tempNetwork.svg';
+import tempImg from './images/ga-ll-tempNetwork.svg';
 
 
   export class HcLlLayoutAlignmentOverview extends React.Component {
@@ -247,7 +247,7 @@ import tempMap from './images/ga-ll-tempNetwork.svg';
 
 
         <div className="hcBasicSideMargin">
-          <img src={tempMap} className="tempImg" />
+          <img src={tempImg} className="tempImg" />
         </div>
 
       </div>
