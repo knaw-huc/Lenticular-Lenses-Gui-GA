@@ -374,7 +374,7 @@ export class HcLlDataSelectionDetail extends React.Component {
                       <div className="hcLabel">Strenght</div>
                       <div className="hcLabel hcListItemLong">Source</div>
                       <div className="hcLabel hcListItemLong">Targets</div>
-                      <div className="hcLabel hcListItemLong" ></div>
+                      <div className="hcLabel hcListItemLong"></div>
                     </div>
                   </div>
 

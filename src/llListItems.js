@@ -158,11 +158,29 @@ import { HclLIconDataSelection, HclLIconAlignment } from './golden-agents';
 
 
 
+              export class HcLlListItemAlignmentClusterViewItem extends React.Component {
+                render() {
+                  return (
+                    <div>
+                      <div>
+                        <div>{this.props.field1}</div>
+                        <strong>{this.props.field2}</strong>
+                        <div className="hcSmallTxt hcClrTxt_Grey">{this.props.field3}</div>
+                      </div>
+                    </div>
+
+                    );
+                  }
+                }
+
+
+
+
 
         export class HcResultListPaging extends React.Component {
           render() {
             return (
-              <div class="hcPagination">
+              <div className="hcPagination">
                 <div><a href="#">← Previous</a></div>
                 <div><a href="#">1</a></div>
                 <div class="bgColorBrand2"><a href="#">2</a></div>

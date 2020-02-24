@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 
 import {StyleGuide, DescribedMock, Embed} from './component-view';
 import {HcHeaderGoldenAgents} from './golden-agents';
-import {HcLlLayoutHome, HcLlLayoutProjectDetail, HcLlLayoutDataSelectionOverview, HcLlDataSelectionDetail, HcLlSelectDataset, HcLlLayoutAlignmentOverview, HcLlAlignmentDetail} from './llPages';
+import {HcLlLayoutHome, HcLlLayoutProjectDetail} from './llPages-General';
+import {HcLlLayoutDataSelectionOverview, HcLlDataSelectionDetail, HcLlSelectDataset} from './llPages-DataSelection';
+import {HcLlLayoutAlignmentOverview, HcLlAlignmentDetail, HcLlAlignmentsLinkCompare, HcLlAlignmentsClusterView} from './llPages-Alignments';
 import {HcModal} from './llUtils';
 
 import data from './tempData';
@@ -53,6 +55,14 @@ ReactDOM.render(<div>
   Alignment detail
   <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
   <HcLlAlignmentDetail pageData={data.pages[4]}/>
+
+  Alignment Link Compare
+  <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+  <HcLlAlignmentsLinkCompare pageData={data.pages[5]}/>
+
+  Alignment Cluster view
+  <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+  <HcLlAlignmentsClusterView pageData={data.pages[6]}/>
 
 
 </div>, document.getElementById('container'));

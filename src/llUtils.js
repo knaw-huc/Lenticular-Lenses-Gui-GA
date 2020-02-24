@@ -11,8 +11,6 @@ import React from 'react';
             <a href="">Alignment</a>
           </div>
         </div>
-
-
         );
       }
     }
@@ -36,10 +34,20 @@ import React from 'react';
               </div>
             </div>
           </div>
-
-
-
-
           );
         }
       }
+
+
+      export class HcLlCompareItem extends React.Component {
+        render() {
+          return (
+            <React.Fragment>
+              <div>
+                <div className="hcLabel">{this.props.label}</div>
+                <div className="hcMarginBottom1 hcSmallTxt">{this.props.content}</div>
+              </div>
+            </ React.Fragment>
+            );
+          }
+        }
