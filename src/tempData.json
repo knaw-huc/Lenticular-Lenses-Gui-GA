@@ -112,6 +112,27 @@
         {"field1":"Marritje Jans", "field2":"Duinkerken", "field3":"ecartico/persons/14013"},
         {"field1":"Marritje Jans", "field2":"Duinkerken", "field3":"ecartico/persons/14013"}
       ]
+    },
+    {
+      "pageName": "DataSelection detail",
+      "filters": [
+        {
+          "filterNr":1,
+          "filterSetting": "OR",
+          "filterRows": [
+            {"entitys": ["pnv_hasName","pnv_PersonName","ns1_ontology_isInRecordList","ns1_ontology_Boedelinventaris","rdf_type"]}
+          ],
+          "condition":"Has value"
+        },
+        {
+          "filterNr":2,
+          "filterSetting": "OR",
+          "filterRows": [
+            {"entitys": ["pnv_hasName","pnv_PersonName","ns1_ontology_isInRecordList","ns1_ontology_Boedelinventaris","rdf_type"]}
+          ],
+          "condition":"Has value"
+        }
+      ]
     }
   ]
 }

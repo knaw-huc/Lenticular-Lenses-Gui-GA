@@ -35,7 +35,7 @@ ReactDOM.render(<div>
 
   Data selection Detail
   <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
-  <HcLlDataSelectionDetail />
+  <HcLlDataSelectionDetail  pageData={data.pages[7]}/>
 
 
 
