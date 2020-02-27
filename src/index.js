@@ -17,52 +17,65 @@ ReactDOM.render(<div>
         <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
       </Embed>
 
-    </DescribedMock>
+      <Embed caption="Homepage" description="" fullscreen="small">
+        <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+        <HcLlLayoutHome pageData={data.pages[0]}/>
+      </Embed>
 
+      <Embed caption="Project detail page" fullscreen="small">
+        <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+        <HcLlLayoutProjectDetail/>
+      </Embed>
+
+      {/*
+        Dataset browser modal page
+        */}
+
+      <Embed caption="Data selection List" fullscreen="small">
+        <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+        <HcLlLayoutDataSelectionOverview pageData={data.pages[1]}/>
+      </Embed>
+
+      <Embed caption="Data selection Detail" fullscreen="small">
+        <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+        <HcLlDataSelectionDetail  pageData={data.pages[7]}/>
+      </Embed>
+
+
+      <Embed caption="Modal select dataset" fullscreen="BIG">
+        <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+        <HcLlDataSelectionDetail  pageData={data.pages[7]}/>
+        <HcModal modalName="Dataset browser">
+          <HcLlSelectDataset pageData={data.pages[2]} />
+        </HcModal>
+      </Embed>
+
+      <Embed caption="Alignment list" fullscreen="small">
+        <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+        <HcLlLayoutAlignmentOverview pageData={data.pages[3]}/>
+      </Embed>
+
+      <Embed caption="Alignment detail" fullscreen="small">
+        <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+        <HcLlAlignmentDetail pageData={data.pages[4]}/>
+      </Embed>
+
+      <Embed caption="Alignment Link Compare" fullscreen="small">
+        <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+        <HcLlAlignmentsLinkCompare pageData={data.pages[5]}/>
+      </Embed>
+
+      <Embed caption="Alignment Cluster view" fullscreen="small">
+        <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
+        <HcLlAlignmentsClusterView pageData={data.pages[6]}/>
+      </Embed>
+
+    </DescribedMock>
   </StyleGuide>
 
-  Homepage
-  <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
-  <HcLlLayoutHome pageData={data.pages[0]}/>
-
-  Project detail page
-  <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
-  <HcLlLayoutProjectDetail/>
-
-  Data selection List
-  <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
-  <HcLlLayoutDataSelectionOverview pageData={data.pages[1]}/>
-
-  Data selection Detail
-  <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
-  <HcLlDataSelectionDetail  pageData={data.pages[7]}/>
 
 
 
-{/* Modal select dataset
-  Dataset browser modal page
-  <HcModal modalName="Dataset browser">
-    <HcLlSelectDataset pageData={data.pages[2]} />
-  </HcModal>
-  */}
-
-
-  Alignment list
-  <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
-  <HcLlLayoutAlignmentOverview pageData={data.pages[3]}/>
-
-
-  Alignment detail
-  <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
-  <HcLlAlignmentDetail pageData={data.pages[4]}/>
-
-  Alignment Link Compare
-  <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
-  <HcLlAlignmentsLinkCompare pageData={data.pages[5]}/>
-
-  Alignment Cluster view
-  <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
-  <HcLlAlignmentsClusterView pageData={data.pages[6]}/>
 
 
 </div>, document.getElementById('container'));

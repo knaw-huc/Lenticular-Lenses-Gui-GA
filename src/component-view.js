@@ -4,9 +4,9 @@ import mdStatic from 'markdown-it';
 const md = mdStatic();
 
 /**
- * 
+ *
  * @param {string} id
- * @param {string} cssCode 
+ * @param {string} cssCode
  */
 function addStyleTag(id, cssCode) {
     if (!document.getElementById(id)) {
@@ -19,9 +19,9 @@ function addStyleTag(id, cssCode) {
 }
 
 /**
- * 
- * @param {TemplateStringsArray} strings 
- * @param {any[]} keys 
+ *
+ * @param {TemplateStringsArray} strings
+ * @param {any[]} keys
  */
 function css(strings, ...keys) {
     const lastIndex = strings.length - 1;
@@ -167,18 +167,18 @@ function addStyles() {
 }
 
 /**
- * 
- * @param {any} val 
+ *
+ * @param {any} val
  */
 function asArray(val) {
     return Array.isArray(val) ? val : val == null ? [] : [val];
 }
 
 /**
- * 
- * @param {any} defaultProps 
- * @param {any} key 
- * @param {any} value 
+ *
+ * @param {any} defaultProps
+ * @param {any} key
+ * @param {any} value
  */
 function isDefaultProp(defaultProps, key, value) {
     if (!defaultProps) {
@@ -188,10 +188,10 @@ function isDefaultProp(defaultProps, key, value) {
 }
 
 /**
- * 
- * @param {any} object 
- * @param {{ useFunctionCode?: boolean; functionNameOnly?: boolean }} opts 
- * 
+ *
+ * @param {any} object
+ * @param {{ useFunctionCode?: boolean; functionNameOnly?: boolean }} opts
+ *
  * @returns {string}
  */
 function stringifyObject(object, opts= {}) {
@@ -229,10 +229,10 @@ function stringifyObject(object, opts= {}) {
 const _JSX_REGEXP = /"<.+>"/g;
 
 /**
- * 
- * @param {any} item 
- * @param {any} options 
- * @param {boolean} delimit 
+ *
+ * @param {any} item
+ * @param {any} options
+ * @param {boolean} delimit
  */
 function serializeItem(item, options, delimit = true) {
     /** @type {string} */
@@ -266,13 +266,13 @@ function serializeItem(item, options, delimit = true) {
 }
 
 /**
- * 
- * @param {any} component 
- * @param {any} options 
+ *
+ * @param {any} component
+ * @param {any} options
  */
 function jsxToString(component, options) {
     const baseOpts = {
-        displayName: component.type.displayName || component.type.name || component.type,
+        displayName: (component.type || {}).displayName || (component.type || {}).name || component.type,
         ignoreProps: [],
         ignoreTags: [],
         keyValueOverride: {},
@@ -339,7 +339,7 @@ function jsxToString(component, options) {
         }
     }
 
-    if (component.props.children) {
+    if (component.props && component.props.children) {
         opts.spacing += 2;
         const indentation = new Array(opts.spacing + 1).join(' ');
         if (Array.isArray(component.props.children)) {
