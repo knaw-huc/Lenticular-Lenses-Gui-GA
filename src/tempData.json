@@ -12,6 +12,7 @@
     {
       "pageName": "Data selection - list",
       "pageNavDs": true,
+      "introductionText": "The data selection contains the selections of datasets you will work with. They can be entities with filters on them.",
       "dsList": [
         {"dsName":"Marriages in 1600-1649", "dsDataset":"Index op notarieel archief", "dsProvider":"Stadsarchief Amsterdam"},
         {"dsName":"Marriages in the 17th Century", "dsDataset":"Index op notarieel archief", "dsProvider":"Stadsarchief Amsterdam"},
@@ -49,6 +50,7 @@
     {
       "pageName": "Alignment- list",
       "pageNavDs": true,
+      "introductionText": "The data selection contains the selections of datasets you will work with. They can be entities with filters on them.",
       "alignmentList": [
         {"prName": "Getty & Frick vs NA:: approx Lev 0,7", "prSource":"7634", "prTarget": "232.113", "prLinks": "345", "prCusters": "33", "prStatus": "Matched-Clustered"},
         {"prName": "Getty & Frick vs NA:: soundex 0,85",   "prSource":"2344", "prTarget": "32.233", "prLinks": "156", "prCusters": "11", "prStatus": "Matched-Clustered"},

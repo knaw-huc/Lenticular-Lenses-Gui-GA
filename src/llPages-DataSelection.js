@@ -18,8 +18,7 @@ export class HcLlLayoutDataSelectionOverview extends React.Component {
       <div className="hcContentContainer hcMarginBottom2">
         <div className="hcRowJustify">
           <div className="hcBasicSideMargin">
-            The data selection contains the selections of datasets you will work with.
-            <br/>They can be entities with filters on them.
+            {this.props.pageData.introductionText}
           </div>
           <div className="hcBasicSideMargin">
             <button type="button" name="button">

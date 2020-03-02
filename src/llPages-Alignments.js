@@ -15,7 +15,7 @@ import tempImg from './images/ga-ll-tempNetwork.svg';
           <div className="hcContentContainer hcMarginBottom2">
             <div className="hcRowJustify">
               <div className="hcBasicSideMargin">
-                Alignments
+                {this.props.pageData.introductionText}
               </div>
               <div className="hcBasicSideMargin">
                 <button type="button" name="button">

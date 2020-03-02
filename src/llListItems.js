@@ -63,6 +63,7 @@ import { HclLIconDataSelection, HclLIconAlignment } from './golden-agents';
                   {this.props.provider}
                 </div>
               </div>
+              <div><a href>Show sample</a></div>
               <div><a href>Duplicate</a></div>
               <div><a href>Delete</a></div>
             </div>
