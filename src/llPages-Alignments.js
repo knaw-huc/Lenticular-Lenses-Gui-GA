@@ -69,13 +69,21 @@ import tempImg from './images/ga-ll-tempNetwork.svg';
     render() {
       return (<React.Fragment>
         <HcLlSubNavigation/>
+
+
         <div className="hcContentContainer hcMarginBottom3">
           <div className="hcRowJustify">
             <div className="hcBasicSideMargin">
-              <h3><HclLIconAlignment/> Getty & Frick vs NA:: soundex 0,85</h3>
+              <h3>
+                <HclLIconAlignment /> 2. B) PERSON:: Getty vs Frick:: Lev approx 0,7 = VALIDATED!
+              </h3>
+            </div>
+            <div className="hcBasicSideMargin">
+              <button type="button" name="button">Reconcile</button>
             </div>
           </div>
         </div>
+
 
         <div className="hcContentContainer hcMarginBottom5">
           <div className="hcTabs hcTabsHoriz hcBasicSideMargin">

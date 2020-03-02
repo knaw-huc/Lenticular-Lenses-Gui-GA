@@ -42,7 +42,7 @@ ReactDOM.render(<div>
       </Embed>
 
 
-      <Embed caption="Modal select dataset" fullscreen="BIG">
+      <Embed caption="Modal select dataset" fullscreen="mall">
         <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
         <HcLlDataSelectionDetail  pageData={data.pages[7]}/>
         <HcModal modalName="Dataset browser">
@@ -55,7 +55,7 @@ ReactDOM.render(<div>
         <HcLlLayoutAlignmentOverview pageData={data.pages[3]}/>
       </Embed>
 
-      <Embed caption="Alignment detail" fullscreen="small">
+      <Embed caption="Alignment detail" fullscreen="BIG">
         <HcHeaderGoldenAgents toolName={data.toolName} projectName={data.projectName}/>
         <HcLlAlignmentDetail pageData={data.pages[4]}/>
       </Embed>
