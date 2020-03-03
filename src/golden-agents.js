@@ -6,7 +6,7 @@ import logoGa from './images/logo-ga.png';
   export class HcHeaderGoldenAgents extends React.Component {
     render() {
       return (
-        <div className="hcGaHeader hcMarginBottom3 bgColorBrand1">
+        <div className="hcGaHeader hcMarginBottom4 bgColorBrand1">
           <div className="hcGaHeaderLogo">
               <img
               src={logoGa}

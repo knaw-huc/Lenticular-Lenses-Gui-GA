@@ -11,7 +11,10 @@
     },
     {
       "pageName": "Data selection - list",
+      "pageTitle": "",
       "pageNavDs": true,
+      "pageNavAl": false,
+      "pageTitle": "",
       "introductionText": "The data selection contains the selections of datasets you will work with. They can be entities with filters on them.",
       "dsList": [
         {"dsName":"Marriages in 1600-1649", "dsDataset":"Index op notarieel archief", "dsProvider":"Stadsarchief Amsterdam"},
@@ -22,6 +25,7 @@
     {
       "pageName": "modal select dataset",
       "pageNavDs": true,
+      "pageNavAl": false,
       "datasetList": [
         {"field1": "Inventaris 5075x", "field2": "Stadsarchief Amsterdam"},
         {"field1": "Inventaris 5073", "field2": "Stadsarchief Amsterdam"},
@@ -49,7 +53,9 @@
     },
     {
       "pageName": "Alignment- list",
-      "pageNavDs": true,
+      "pageTitle": "",
+      "pageNavDs": false,
+      "pageNavAl": true,
       "introductionText": "The data selection contains the selections of datasets you will work with. They can be entities with filters on them.",
       "alignmentList": [
         {"prName": "Getty & Frick vs NA:: approx Lev 0,7", "prSource":"7634", "prTarget": "232.113", "prLinks": "345", "prCusters": "33", "prStatus": "Matched-Clustered"},
@@ -62,7 +68,13 @@
     },
     {
       "pageName": "Alignment- detail",
-      "pageNavDs": true,
+      "pageTitle": "2. B) PERSON:: Getty vs Frick:: Lev approx 0,7 = VALIDATED!",
+      "pageNavDs": false,
+      "pageNavAl": true,
+      "infoLinks":"24",
+      "infoClusters":"45",
+      "infoSources":"455",
+      "infoTargets":"136,823",
       "matchSetSrc": ["Frick experiment [type: saa_Inventory]:: Notarial Acts ONLY","GPI experiment [type: saa_Inventory]:: Notarial Acts ONLY"],
       "matchSetTrg": [
         "Stadsarchief Amsterdam: Index op notarieel archief [type: saa_HuwelijkseVoorwaarden]",
@@ -83,7 +95,8 @@
     },
     {
       "pageName": "Alignment-LinkCompare",
-      "pageNavDs": true,
+      "pageNavDs": false,
+      "pageNavAl": true,
       "nr": "1",
       "strenght":"1.000",
       "sUri": "http://goldenagents.org/uva/SAA/Inventory/N-2048",
@@ -117,6 +130,7 @@
     },
     {
       "pageName": "DataSelection detail",
+      "pageTitle": "<HclLIconDataSelection/> Marriages in 1600-1649",
       "filters": [
         {
           "filterNr":1,

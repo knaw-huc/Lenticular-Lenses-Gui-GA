@@ -13,7 +13,7 @@ import {HclLIconDataSelection, HclLIconAlignment} from './golden-agents';
 export class HcLlLayoutDataSelectionOverview extends React.Component {
   render() {
     return (<React.Fragment>
-      <HcLlSubNavigation/>
+      <HcLlSubNavigation pageTitle={this.props.pageData.pageTitle} isDs={this.props.pageData.pageNavDs} isAl={this.props.pageData.pageNavAl} />
 
       <div className="hcContentContainer hcMarginBottom2">
         <div className="hcRowJustify">
@@ -65,15 +65,8 @@ export class HcLlLayoutDataSelectionOverview extends React.Component {
 export class HcLlDataSelectionDetail extends React.Component {
   render() {
     return (<React.Fragment>
-      <HcLlSubNavigation/>
-      <div className="hcContentContainer hcMarginBottom3">
-        <div className="hcRowJustify">
-          <div className="hcBasicSideMargin">
-            <h3><HclLIconDataSelection/>
-              Marriages in 1600-1649</h3>
-          </div>
-        </div>
-      </div>
+      <HcLlSubNavigation pageTitle={this.props.pageData.pageTitle} isDs={this.props.pageData.pageNavDs} isAl={this.props.pageData.pageNavAl} />
+
 
       <div className="hcContentContainer hcMarginBottom5">
         <div className="hcTabs hcTabsHoriz hcBasicSideMargin">

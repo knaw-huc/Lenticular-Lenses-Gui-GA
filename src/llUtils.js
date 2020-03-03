@@ -6,9 +6,14 @@ import React from 'react';
     render() {
       return (
         <div className="hcContentContainer hcMarginBottom4">
-          <div className="hcBasicSideMargin hcAlignRight hcGaTabsLoudness1">
-            <a href="" className="hcSelected">Data Selection</a>
-            <a href="">Alignment</a>
+          <div className="hcRowJustifyTop">
+            <div className="hcBasicSideMargin">
+              <h3>{this.props.pageTitle}</h3>
+            </div>
+            <div className="hcBasicSideMargin hcAlignRight hcGaTabsLoudness1">
+              <a href="" className={ (this.props.isDs ? 'hcSelected' : '')} >Data Selection</a>
+              <a href="" className={ (this.props.isAl ? 'hcSelected' : '')} >Alignment</a>
+            </div>
           </div>
         </div>
         );
@@ -51,3 +56,33 @@ import React from 'react';
             );
           }
         }
+
+
+        export class HcLlAlignmantInfoBar extends React.Component {
+          render() {
+            return (
+              <div className="hcContentContainer hcMarginBottom3">
+                <div className="hcRowJustify hcStickOutBox hcRoundedCorners">
+                  <div className="hc4columns">
+                    <div className="hcBasicSideMargin">
+                      Sources: <strong>{this.props.infoSources}</strong>
+                    </div>
+                    <div className="hcBasicSideMargin">
+                      Targets: <strong>{this.props.infoTargets}</strong>
+                    </div>
+                    <div className="hcBasicSideMargin">
+                      Links <strong>{this.props.infoLinks}</strong>
+                    </div>
+                    <div className="hcBasicSideMargin">
+                      Clusters: <strong>{this.props.infoClusters}</strong>
+                    </div>
+                  </div>
+                  <div className="hcBasicSideMargin">
+                    <button type="button" name="button">Reconcile</button>
+                  </div>
+                </div>
+              </div>
+
+              );
+            }
+          }

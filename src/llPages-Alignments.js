@@ -1,6 +1,6 @@
 import React from 'react';
 import {HcLlListItemMinimal, HcLlListItemMinimal2Fields, HcLlListLabel, HcLlListItemDataSelection, HcLlListItemAlignment, HcResultListPaging,HcLlListItemAlignmentLinks, HcLlListItemAlignmentClusters,HcLlListItemAlignmentClusterViewItem} from './llListItems';
-import {HcLlSubNavigation, HcLlCompareItem} from './llUtils';
+import {HcLlSubNavigation, HcLlCompareItem, HcLlAlignmantInfoBar} from './llUtils';
 import {HclLIconDataSelection, HclLIconAlignment} from './golden-agents';
 import tempImg from './images/ga-ll-tempNetwork.svg';
 
@@ -10,7 +10,7 @@ import tempImg from './images/ga-ll-tempNetwork.svg';
       return (
         <React.Fragment>
 
-          <HcLlSubNavigation/>
+          <HcLlSubNavigation pageTitle={this.props.pageData.pageTitle} isDs={this.props.pageData.pageNavDs} isAl={this.props.pageData.pageNavAl} />
 
           <div className="hcContentContainer hcMarginBottom2">
             <div className="hcRowJustify">
@@ -68,22 +68,14 @@ import tempImg from './images/ga-ll-tempNetwork.svg';
   export class HcLlAlignmentDetail extends React.Component {
     render() {
       return (<React.Fragment>
-        <HcLlSubNavigation/>
+        <HcLlSubNavigation pageTitle={this.props.pageData.pageTitle} isDs={this.props.pageData.pageNavDs} isAl={this.props.pageData.pageNavAl} />
 
-
-        <div className="hcContentContainer hcMarginBottom3">
-          <div className="hcRowJustify">
-            <div className="hcBasicSideMargin">
-              <h3>
-                <HclLIconAlignment /> 2. B) PERSON:: Getty vs Frick:: Lev approx 0,7 = VALIDATED!
-              </h3>
-            </div>
-            <div className="hcBasicSideMargin">
-              <button type="button" name="button">Reconcile</button>
-            </div>
-          </div>
-        </div>
-
+        <HcLlAlignmantInfoBar
+          infoLinks={this.props.pageData.infoLinks}
+          infoClusters={this.props.pageData.infoClusters}
+          infoSources={this.props.pageData.infoSources}
+          infoTargets={this.props.pageData.infoTargets}
+          />
 
         <div className="hcContentContainer hcMarginBottom5">
           <div className="hcTabs hcTabsHoriz hcBasicSideMargin">
