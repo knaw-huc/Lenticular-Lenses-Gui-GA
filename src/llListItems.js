@@ -124,8 +124,7 @@ import { HclLIconDataSelection, HclLIconAlignment } from './golden-agents';
                     </div>
                     <div className="hcListItemLong">
                       <button type="button" name="button">Compare</button>
-                      <button type="button" name="button">Accept</button>
-                      <button type="button" name="button">Decline</button>
+                      <button className="bgColorBrand2">Accept</button><button className="hcClrBg_Error">Decline</button>
                     </div>
               </div>
                 );

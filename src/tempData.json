@@ -130,7 +130,9 @@
     },
     {
       "pageName": "DataSelection detail",
-      "pageTitle": "<HclLIconDataSelection/> Marriages in 1600-1649",
+      "pageTitle": " Marriages in 1600-1649",
+      "pageNavDs": false,
+      "pageNavAl": true,
       "filters": [
         {
           "filterNr":1,

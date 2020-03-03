@@ -200,7 +200,7 @@ import tempImg from './images/ga-ll-tempNetwork.svg';
             <div className="hc3columns hcBasicSideMargin">
 
               <div className="hcTxtLeft"><button>Previous</button></div>
-              <div className="hcTxtCenter"><button>Accept</button><button>Decline</button></div>
+              <div className="hcTxtCenter"><button className="bgColorBrand2">Accept</button><button className="hcClrBg_Error">Decline</button></div>
               <div className="hcTxtRight"><button>Next</button></div>
             </div>
           </div>
